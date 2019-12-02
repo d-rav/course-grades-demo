@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>New Student Record</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Student Name" [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Assignment 1 Grade" type="number" [(ngModel)]="data.assignment1">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Assignment 2 Grade" type="number" [(ngModel)]="data.assignment2">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Test 1 Grade" type="number" [(ngModel)]="data.test1">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Test 2 Grade" type="number" [(ngModel)]="data.test2">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Attendance Grade" type="number" [(ngModel)]="data.attendance">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data">Submit</button>
+</div>
